@@ -20,8 +20,6 @@ export default async (request: NowRequest, response: NowResponse): Promise<void 
         return response.status(400).send(err.message);
       case 'NotionPageAccessError':
         return response.status(401).send(err.message);
-      default:
-        return response.status(500).send(err.message);
     }
   }
 };
